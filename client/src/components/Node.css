@@ -1,0 +1,38 @@
+.node-container {
+  
+  font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  .contentbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-right: 6px;
+    padding-left: 8px;
+    padding-bottom: 6px;
+  }
+  .data{
+    font-size: 1.2em;
+  }
+
+  .member-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+  }
+  
+  .image{
+    max-width: 40%;
+    max-height: 40%;
+  }
+  .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+ 
+  
