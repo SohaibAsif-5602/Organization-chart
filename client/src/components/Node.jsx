@@ -1,10 +1,8 @@
 import React from 'react'
 import './Node.css'
-import image from '../assets/me2.jpg'
 
-function Node({BPS,Designation,Branch}) {
+function Node({BPS,Designation,Branch,image}) {
   
-
 
   return (
     <div className="node-container">

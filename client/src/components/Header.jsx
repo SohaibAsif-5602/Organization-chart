@@ -22,11 +22,10 @@ function Header({setFilter}) {
           border: '1px solid #309e0c',
           marginLeft:180,
           fontSize: 16,
-          backgroundColor: "#E6FFE2",
-          color: '#309e0c'
+          backgroundColor: "#309e0c",
+          color: '#E6FFE2'
         }}
       >
-        <option value="Branch">Filter by Branch</option>
         <option value="">All</option>
         <option value="IT Branch">IT</option>
         <option value="Admin">Admin</option>
