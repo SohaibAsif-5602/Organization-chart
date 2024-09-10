@@ -20,10 +20,12 @@ export default function Reactflowchart({ filter }) {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [expandedNodes, setExpandedNodes] = useState({});
   const [data, setData] = useState([]);
-  const {fitView} =useReactFlow();
+  const {fitView,setCenter} =useReactFlow();
   const [clicktimeout,Setclicktimeout]=useState(null);
   const [ismodalvisible,Setismodalvisible]=useState(false);
   const [modaldataid,Setmodaldataid]=useState(null);
+  const [nodepos,Setnodepos] =useState({x:null,y:null});
+
 
 
 
@@ -34,12 +36,21 @@ export default function Reactflowchart({ filter }) {
       .catch(err => console.log(err));
   }, []);
   useEffect(()=>{
+    
     fitView(
-      {      
+      { 
         padding:0.5,
-        duration:800
+        duration:800,
+        
       }
     );
+    if(nodepos!=null && nodepos.y!=null)
+    {
+      setCenter(nodepos.x,nodepos.y,{
+        zoom:0.65,
+        duration:800,
+      })
+    }
   },[nodes])
 
 
@@ -321,6 +332,8 @@ else{
           minZoom={0.3}
           maxZoom={1.2}
           onNodeClick={(event,node) => {
+            Setnodepos({x:node.position.x+250,y:node.position.y+200});
+            console.log(nodepos);
             onclick(node.id);
           }}
           onNodeDoubleClick={(event,node)=>{
@@ -346,7 +359,11 @@ else{
             cursor: 'pointer',
           }}
           
-          onClick={onmodalclick}>
+          onClick={()=>{
+            
+            onmodalclick();
+            
+          }}>
       <Modal
         image={data.find(member => member.id === modaldataid).imageLink}
         BPS={data.find(member => member.id === modaldataid).BPS}
