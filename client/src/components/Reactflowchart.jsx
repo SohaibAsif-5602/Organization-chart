@@ -328,7 +328,7 @@ else{
           }}
         >
           <Controls />
-          <MiniMap />
+          <MiniMap style={{backgroundColor:'#309e0c'}} />
         </ReactFlow>
         {ismodalvisible && modaldataid && (
           <div style={{

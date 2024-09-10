@@ -51,7 +51,7 @@ const BPSScaleChart = () => (
     <div style={{ flex: 1, marginRight: '10px' }}>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {BPS_SCALE_1.map(({ BPS, color }) => (
-          <li key={BPS} style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+          <li key={BPS} style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
             <div style={{
               width: '15px',
               height: '15px',
@@ -68,7 +68,7 @@ const BPSScaleChart = () => (
       
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {BPS_SCALE_2.map(({ BPS, color }) => (
-          <li key={BPS} style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+          <li key={BPS} style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
             <div style={{
               width: '15px',
               height: '15px',
