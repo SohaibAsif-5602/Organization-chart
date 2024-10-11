@@ -1,0 +1,4 @@
+.hide-connectors .react-flow__handle {
+    visibility: hidden;
+  }
+  
